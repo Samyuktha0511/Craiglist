@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ search | title }}
+
+{% endblock content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<div class="row">
+    {% for posting in final_postings %}
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <div class="card-image">
+              <a href="{{ posting.1 }}"><img src="{{ posting.3 }}" alt=""</a>
+          <div>
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p>{{ posting 0 }}</p>
+        </div>
+        <div class="card-action">
+          <a href="{{ posting }}">View listing: Price {{ posting.2 }}</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
